@@ -1,0 +1,7 @@
+opencv-python
+numpy
+Pillow
+exifread
+python-dotenv
+google-generativeai
+ultralytics
