@@ -1,0 +1,121 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  width:100%;
+  box-sizing: border-box;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Base style for the side panel */
+.side-panel {
+  position: fixed; /* Or 'absolute' depending on your layout */
+  top: 0;
+  left: 0; /* Position on the left side */
+  width: 250px; /* Define the open width */
+  height: 100%;/* Example background */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Example shadow */
+  overflow-x: hidden; /* Hide content that overflows when collapsed */
+  transition: transform 0.3s ease-out; /* Animate the transform property over 0.3s */
+  z-index: 100; /* Ensure it's above other content */
+  will-change: transform; /* Performance hint for animation */
+}
+
+/* Style for the collapsed state */
+.side-panel.collapsed {
+  /* Move the panel completely out of view to the left */
+  transform: translateX(-100%);
+  /* Using transform is generally better for performance than animating width */
+
+  /* Hide content and prevent interaction when collapsed */
+  visibility: hidden; /* Hides element but preserves space (use with transform) */
+  /* Using display: none; would remove it from the layout immediately without transition */
+}
+
+/* Style for the open state */
+.side-panel.open {
+  /* Bring the panel into view */
+  transform: translateX(0);
+  /* visibility: visible; */ /* Often implicitly visible when transform is 0, but can be explicit */
+}
+
+/* Style for the content inside the panel */
+
+
+/* Style for the toggle button */
+.toggle-button {
+  position: fixed;
+  top: 17px;
+  left: 20px; /* Position it just outside the *open* panel (250px width + 10px gap) */
+  z-index: 101; /* Ensure it's above the panel */
+  /* Basic button styling */
+  padding: 3px 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  transition: left 0.3s ease-out; /* Animate the button's position */
+}
+
+/* Wrapper around your card/content area */
+.main-content {
+  margin-left: 250px; /* Same as open panel width */
+  transition: margin-left 0.3s ease-out;
+}
+
+/* When panel is collapsed */
+.main-content.collapsed {
+  margin-left: 0;
+}
+
+
+
+/* Optional: Overlay style (if you uncommented this in the JS/JSX) */
+/*
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); // Semi-transparent black
+  z-index: 99; // Below the panel, above main content
+}
+*/
