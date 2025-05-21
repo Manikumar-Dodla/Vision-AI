@@ -78,3 +78,9 @@ This will launch the frontend development server.
 ```
 The entire Project Structure is in the structure.txt folder
 ```
+
+
+
+```
+Hint : You can get Gemini API Key for free from [Link Text](https://aistudio.google.com)
+```
