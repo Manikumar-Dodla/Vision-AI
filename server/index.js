@@ -5,7 +5,7 @@ import jwt from 'jsonwebtoken';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
-import uploadRoutes from '../routes/upload.js'; // ✅ import route
+import uploadRoutes from './upload.js'; // ✅ import route
 
 dotenv.config();
 

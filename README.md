@@ -42,10 +42,11 @@ pip install -r requirements.txt
 
 ### 3. 🔌 Start the Backend
 
+Place your API Key in server/.env
 Navigate to the backend model handler and run:
 
 ```bash
-cd server/models
+cd server
 node index.js
 ```
 
@@ -67,6 +68,8 @@ This will launch the frontend development server.
 
 * Ensure MongoDB is running and your environment variables are configured correctly (you can use `.env` for this).
 * `node_modules/` is ignored via `.gitignore`, so always run `npm install` after cloning.
+* Don't forget to add your API key to the `.env` file.
+* The `server` folder contains the backend code and the `src` folder contains the frontend code.
 
 ---
 

@@ -1,7 +1,7 @@
 import express from 'express';
 import multer from 'multer';
 import { spawn } from 'child_process';
-import { classifyPrompt } from '../langchain/classifier.js';
+import { classifyPrompt } from './classifier.js';
 
 const router = express.Router();
 const upload = multer({ dest: 'uploads/' });
@@ -22,7 +22,7 @@ router.post('/upload', upload.single('image'), async (req, res) => {
     }
 
     // Step 1: Run decider.py
-    const deciderProcess = spawn('python', ['../scripts/decider.py', decisionCode.toString(), imagePath]);
+    const deciderProcess = spawn('python', ['./scripts/decider.py', decisionCode.toString(), imagePath]);
 
     let deciderOutput = '';
     let deciderError = '';
@@ -48,7 +48,7 @@ router.post('/upload', upload.single('image'), async (req, res) => {
       }
 
       // Step 2: Run beautify.py
-      const beautifyProcess = spawn('python', ['../scripts/beautify.py', prompt]);
+      const beautifyProcess = spawn('python', ['./scripts/beautify.py', prompt]);
 
       let beautifyOutput = '';
       let beautifyError = '';

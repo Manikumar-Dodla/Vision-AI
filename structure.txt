@@ -11,39 +11,28 @@ C:.
 |   README.md
 |   requirements.txt
 |   structure.txt
-|   strucutre.txt
 |   tailwind.config.js
 |   vite.config.js
-|                    
+|   
 +---public
 |       mockServiceWorker.js
 |       vite.svg
 |       
 +---server
-|   +---langchain
-|   |       .env
-|   |       classifier.js
+|   |   .env
+|   |   classifier.js
+|   |   index.js
+|   |   upload.js
+|   |   yolov8n.pt
+|   |   
+|   +---scripts
+|   |       beautify.py
+|   |       decider.py
+|   |       metadata.py
+|   |       yolov8n.pt
+|   |       yolo_detect.py
 |   |       
-|   +---models
-|   |   |   .env
-|   |   |   index.js
-|   |   |   Users.js
-|   |   |   yolov8n.pt
-|   |   |   
-|   |   \---uploads
-|   +---routes
-|   |   |   .env
-|   |   |   upload.js
-|   |   |   
-|   |   \---uploads
-|   \---scripts
-|           .env
-|           beautify.py
-|           decider.py
-|           metadata.py
-|           yolov8n.pt
-|           yolo_detect.py
-|           
+|   \---uploads
 \---src
     |   App.css
     |   App.jsx
