@@ -35,6 +35,7 @@ npm install
 #### Python packages:
 
 ```bash
+cd server
 pip install -r requirements.txt
 ```
 
