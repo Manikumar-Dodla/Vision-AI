@@ -73,14 +73,23 @@ This will launch the frontend development server.
 
 ---
 
+## What should .env contain?
+
+GOOGLE_API_KEY=YOUR_API_KEY
+MONGODB_URI=mongodb://localhost:27017/
+JWT_SECRET=YOUR_JWT_SECRET
+
+---
 ## 📂 Project Structure
 
 ```
 The entire Project Structure is in the structure.txt folder
 ```
 
-
+---
 
 ```
 Hint : You can get Gemini API Key for free from [Link Text](https://aistudio.google.com)
+For JWT_SECRET you can run : **`node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`**
+
 ```
